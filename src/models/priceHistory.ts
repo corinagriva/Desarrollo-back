@@ -1,4 +1,4 @@
-export class priceHistory {
+export class PriceHistory {
     dataSince: number 
     price: number
 

@@ -1,4 +1,4 @@
-export class city {
+export class City {
     postCode: string 
     name: string
     cuit: number

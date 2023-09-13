@@ -1,4 +1,4 @@
-export class city {
+export class Province {
     code: number 
     name: string
 

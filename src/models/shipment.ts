@@ -1,4 +1,4 @@
-export class shipment {
+export class Shipment {
     cuit: number 
     businessName: string
     phone: number

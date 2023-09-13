@@ -1,4 +1,4 @@
-export class discount {
+export class Discount {
     dataSince: number 
     amount: number
     discount: number    
