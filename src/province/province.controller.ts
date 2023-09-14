@@ -7,7 +7,7 @@ const repository = new provinceRepository();
 function sanitizeProvinceInput(req: Request, res: Response, next: NextFunction){
   
     req.body.sanitizeInput ={
-      provinceId: req.body.provinceId,
+      suppliers: req.body.code,
       name: req.body.name,
     }
     //more checks here
@@ -35,7 +35,7 @@ function findOne(req: Request, res: Response){
 function add(req: Request, res: Response){
     const input = req.body.sanitizeInput;
   
-    const provinceInput = new Province(input.provinceId, input.name);
+    const provinceInput = new Province(input.code, input.name);
   
     const province = repository.add(provinceInput);
     return res.status(201).send({message: 'Province created!', data: province});  
@@ -43,7 +43,7 @@ function add(req: Request, res: Response){
   };
   
   function update(req: Request, res: Response){
-    req.body.sanitizeInput.provinceId = req.params.id;
+    req.body.sanitizeInput.code = req.params.id;
     const province =repository.update(req.body.sanitizeInput);
   
     if (!province) {

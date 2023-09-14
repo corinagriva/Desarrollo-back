@@ -3,13 +3,14 @@ import express, { Request, Response, NextFunction} from 'express';
 //import cors from 'cors';
 //import { productRouter } from '../product/product.routes.js';
 import { provinceRouter } from './province/province.routes';
+import { supplierRouter } from './supplier/supplier.routes';
 
-//const repository = new ProvinceRepository();
 
 const app = express();
 app.use(express.json());
 
 app.use('/api/provinces', provinceRouter);
+app.use('/api/suppliers', supplierRouter)
 
 
 app.use((_, res) => {
